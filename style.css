@@ -1,0 +1,97 @@
+:root {
+  --green: #c8e6c9;
+  --pink: #f8bbd0;
+  --green-dark: #81c784;
+  --text: #2f3e34;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, var(--green), var(--pink));
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--text);
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+button {
+  background: var(--green-dark);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f8e9;
+  border-radius: 12px;
+  border-left: 6px solid var(--green-dark);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Loader */
+.loader {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+  border: 5px solid #f8bbd0;
+  border-top: 5px solid #81c784;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark pastel mode */
+body.dark {
+  background: linear-gradient(135deg, #2e473c, #4a2c3a);
+}
+
+body.dark .card {
+  background: #1f2f29;
+  color: white;
+}
+
+.theme-toggle {
+  margin-top: 20px;
+  background: #f8bbd0;
+}
+
+/* Map styling */
+#map {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
